@@ -1,32 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Success</title>
+document.body.innerHTML = `
+    <div style="
+        padding:30px;
+        font-family:Arial;
+    ">
 
-    <style>
-
-        body{
-            font-family: Arial;
-            background:#f0f0f0;
-            padding:40px;
-        }
-
-        .success{
+        <div style="
             background:white;
-            padding:20px;
             border-left:8px solid green;
+            padding:20px;
             width:500px;
-        }
+        ">
+            <h2>Great!</h2>
 
-    </style>
+            <p>${data.message}</p>
 
-</head>
-<body>
+            <hr>
 
-<div class="success">
-    <h2>Great!</h2>
-    <p>Successfully applied for hostel.</p>
-</div>
+            <h3>
+                Time Taken: ${finalTime} seconds
+            </h3>
 
-</body>
-</html>
+        </div>
+
+    </div>
+`;

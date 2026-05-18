@@ -1,3 +1,16 @@
+const timerElement = document.getElementById("timer");
+
+let startTime = Date.now();
+
+const timerInterval = setInterval(() => {
+
+    const elapsed =
+        ((Date.now() - startTime) / 1000).toFixed(2);
+
+    timerElement.innerText = elapsed;
+
+}, 10);
+
 const form = document.getElementById("hostelForm");
 
 const email = document.getElementById("email");
@@ -59,23 +72,39 @@ form.addEventListener("submit", async (e) => {
 
     if(data.success){
 
-        document.body.innerHTML = `
+    clearInterval(timerInterval);
+
+    const finalTime =
+        ((Date.now() - startTime) / 1000).toFixed(2);
+
+    document.body.innerHTML = `
+        <div style="
+            padding:30px;
+            font-family:Arial;
+        ">
+
             <div style="
-                padding:30px;
-                font-family:Arial;
+                background:white;
+                border-left:8px solid green;
+                padding:20px;
+                width:500px;
             ">
-                <div style="
-                    background:white;
-                    border-left:8px solid green;
-                    padding:20px;
-                    width:500px;
-                ">
-                    <h2>Great!</h2>
-                    <p>${data.message}</p>
-                </div>
+
+                <h2>Great!</h2>
+
+                <p>${data.message}</p>
+
+                <hr>
+
+                <h3>
+                    Time Taken: ${finalTime} seconds
+                </h3>
+
             </div>
-        `;
-    }
+
+        </div>
+    `;
+}
     else{
         alert(data.message);
     }

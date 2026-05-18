@@ -74,6 +74,15 @@ button:hover{
     font-size:20px;
 }
 
+#timerBox{
+    background:#f5f5f5;
+    padding:12px;
+    margin-bottom:20px;
+    font-size:20px;
+    font-weight:bold;
+    border-left:5px solid #007bff;
+}
+
 /* MOBILE RESPONSIVE */
 
 @media (max-width: 768px){
