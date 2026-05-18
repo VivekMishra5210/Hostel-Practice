@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: hostel-practice
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app

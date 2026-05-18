@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Accommodation</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Hostel Accommodation</h1>
+
+    {% if application_open %}
+
+    <form id="hostelForm">
+
+        <div class="field">
+            <label>Nationality</label>
+            <input type="text" value="INDIAN" disabled>
+        </div>
+
+        <div class="field">
+            <label>Is PwD</label>
+            <input type="text" value="No" disabled>
+        </div>
+
+        <div class="field">
+            <label>Is Kashmiri Migrant</label>
+            <input type="text" value="No" disabled>
+        </div>
+
+        <div class="field">
+            <label>Hostel Preference</label>
+
+            <select name="hostel_preference" required>
+                <option value="">Select</option>
+                <option value="Block A - Boy Hostel">
+                    Block A - Boy Hostel
+                </option>
+
+                <option value="Block A - Girls Hostel">
+                    Block A - Girls Hostel
+                </option>
+            </select>
+        </div>
+
+        <div class="field">
+            <label>Room Preference</label>
+
+            <select name="room_preference" required>
+                <option value="">Select</option>
+                <option value="2-seater">2-seater</option>
+                <option value="4-seater">4-seater</option>
+            </select>
+        </div>
+
+        <div class="upload-box">
+            <p>Drag & Drop Files Here...</p>
+            <small>No Need to upload any file</small>
+        </div>
+
+        <div class="field">
+            <label>Emergency Contact Name</label>
+            <input type="text" name="emergency_name" required>
+        </div>
+
+        <div class="field">
+            <label>Emergency Contact Email</label>
+            <input type="email" name="emergency_email" id="email" required>
+            <span class="tick" id="emailTick">✔</span>
+        </div>
+
+        <div class="field">
+            <label>Emergency Contact Mobile</label>
+            <input type="text" name="emergency_mobile" id="mobile" required>
+            <span class="tick" id="mobileTick">✔</span>
+        </div>
+
+        <div class="checkbox-row">
+            <input type="checkbox" name="undertaking" required>
+
+            <p>
+                I do hereby understand and undertake that I will abide by all
+                rules and regulations.
+            </p>
+        </div>
+
+        <button type="submit" id="submitBtn">
+            Submit & Apply
+        </button>
+
+    </form>
+
+    {% else %}
+
+    <h3>Hostel Application deadline is over.</h3>
+
+    {% endif %}
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
