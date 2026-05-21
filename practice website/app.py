@@ -12,12 +12,27 @@ def index():
 @app.route("/submit", methods=["POST"])
 def submit():
 
-    hostel_preference = request.form.get("hostel_preference")
-    room_preference = request.form.get("room_preference")
-    emergency_name = request.form.get("emergency_name")
-    emergency_email = request.form.get("emergency_email")
-    emergency_mobile = request.form.get("emergency_mobile")
-    undertaking = request.form.get("undertaking")
+    hostel_preference = request.form.get("1_pref")
+
+    room_preference = request.form.get(
+        "HostelApplication[room_type_preference]"
+    )
+
+    emergency_name = request.form.get(
+        "HostelApplication[emergency_contact_details]"
+    )
+
+    emergency_email = request.form.get(
+        "HostelApplication[emergency_contact_email]"
+    )
+
+    emergency_mobile = request.form.get(
+        "HostelApplication[emergency_contact_mobile]"
+    )
+
+    undertaking = request.form.get(
+        "has_agreed_terms"
+    )
 
     if not all([
         hostel_preference,
