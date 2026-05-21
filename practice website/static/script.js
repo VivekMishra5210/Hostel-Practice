@@ -13,8 +13,15 @@ const timerInterval = setInterval(() => {
 
 const form = document.getElementById("hostelForm");
 
-const email = document.getElementById("email");
-const mobile = document.getElementById("mobile");
+const email =
+    document.getElementById(
+        "emergency_contact_email"
+    );
+
+const mobile =
+    document.getElementById(
+        "emergency_contact_mobile"
+    );
 
 const emailTick = document.getElementById("emailTick");
 const mobileTick = document.getElementById("mobileTick");

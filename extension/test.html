@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IIITN Hostel Test</title>
+
+    <style>
+
+        body{
+            font-family:Arial;
+            padding:40px;
+        }
+
+        .field{
+            margin-bottom:20px;
+        }
+
+        label{
+            display:block;
+            margin-bottom:8px;
+        }
+
+        input,
+        select{
+            width:400px;
+            padding:10px;
+        }
+
+        button{
+            padding:12px 20px;
+            background:green;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>IIITN Hostel Form Test</h1>
+
+<div class="field">
+
+    <label>Hostel Preference</label>
+
+    <select id="pref_1">
+
+        <option value="">Select Hostel</option>
+
+        <option value="2000008">
+            Block A - Boy Hostel
+        </option>
+
+    </select>
+
+</div>
+
+<div class="field">
+
+    <label>Room Preference</label>
+
+    <select id="hostelapplication-room_type_preference">
+
+        <option value="2-Seater">
+            2-Seater
+        </option>
+
+        <option value="4-Seater">
+            4-Seater
+        </option>
+
+    </select>
+
+</div>
+
+<div class="field">
+
+    <label>Emergency Contact Name</label>
+
+    <input
+        type="text"
+        id="emergency_contact_details"
+    >
+
+</div>
+
+<div class="field">
+
+    <label>Emergency Contact Email</label>
+
+    <input
+        type="text"
+        id="emergency_contact_email"
+    >
+
+</div>
+
+<div class="field">
+
+    <label>Emergency Contact Mobile</label>
+
+    <input
+        type="text"
+        id="emergency_contact_mobile"
+    >
+
+</div>
+
+<div class="field">
+
+    <label>
+
+        <input
+            type="checkbox"
+            id="terms_checkbox"
+        >
+
+        Accept Terms
+
+    </label>
+
+</div>
+
+<button id="final-submit-btn">
+    Submit & Apply
+</button>
+
+</body>
+
+</html>

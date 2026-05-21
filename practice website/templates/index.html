@@ -38,9 +38,14 @@
         <div class="field">
             <label>Hostel Preference</label>
 
-            <select name="hostel_preference" required>
+            <select
+                id="pref_1"
+                class="pref_list_drop_down"
+                name="1_pref"
+                required
+            >
                 <option value="">Select</option>
-                <option value="Block A - Boy Hostel">
+                <option value="2000008">
                     Block A - Boy Hostel
                 </option>
 
@@ -53,10 +58,15 @@
         <div class="field">
             <label>Room Preference</label>
 
-            <select name="room_preference" required>
+            <select
+                id="hostelapplication-room_type_preference"
+                class="form-control"
+                name="HostelApplication[room_type_preference]"
+                required
+            >
                 <option value="">Select</option>
-                <option value="2-seater">2-seater</option>
-                <option value="4-seater">4-seater</option>
+                <option value="2-seater">2-Seater</option>
+                <option value="4-seater">4-Seater</option>
             </select>
         </div>
 
@@ -67,23 +77,48 @@
 
         <div class="field">
             <label>Emergency Contact Name</label>
-            <input type="text" name="emergency_name" required>
+            <input
+                type="text"
+                id="emergency_contact_details"
+                class="form-control"
+                name="HostelApplication[emergency_contact_details]"
+                required
+            >
         </div>
 
         <div class="field">
             <label>Emergency Contact Email</label>
-            <input type="email" name="emergency_email" id="email" required>
+            <input
+                type="text"
+                id="emergency_contact_email"
+                class="form-control"
+                name="HostelApplication[emergency_contact_email]"
+                required
+            >
             <span class="tick" id="emailTick">✔</span>
         </div>
 
         <div class="field">
             <label>Emergency Contact Mobile</label>
-            <input type="text" name="emergency_mobile" id="mobile" required>
+            <input
+                type="text"
+                id="emergency_contact_mobile"
+                class="form-control"
+                name="HostelApplication[emergency_contact_mobile]"
+                required
+            >
             <span class="tick" id="mobileTick">✔</span>
         </div>
 
         <div class="checkbox-row">
-            <input type="checkbox" name="undertaking" required>
+            <input
+                type="checkbox"
+                id="terms_checkbox"
+                class="checkbox mt-2"
+                name="has_agreed_terms"
+                value="1"
+                required
+            >
 
             <p>
                 I do hereby understand and undertake that I will abide by all
@@ -91,7 +126,11 @@
             </p>
         </div>
 
-        <button type="submit" id="submitBtn">
+        <button
+            type="submit"
+            id="final-submit-btn"
+            class="btn btn-success float-right"
+        >
             Submit & Apply
         </button>
 
